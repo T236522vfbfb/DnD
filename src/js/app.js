@@ -1,9 +1,5 @@
-// TODO: write code here
+import CardManager from './cardManager';
 
-import PlayingArea from './playing-area';
+const cardManager = new CardManager();
 
-document.addEventListener('DOMContentLoaded', () => {
-  const playingArea = new PlayingArea();
-
-  setInterval(playingArea.randomMovingGoblin, 1000);
-})
+cardManager.bindToDOM(document.querySelector('.container'));
